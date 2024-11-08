@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator and Scanner</title>
+    <link href="/static/css/generateform.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+    <script src="/static/js/scanning.js"></script>
+</head>
+<body>
+        <div style="display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;margin: 15px auto;margin-bottom: 110px;">
+
+        <div style="display: flex;
+        flex-direction: row;
+        gap: 15px;">
+        <div style="display: flex;flex-direction: column;gap: 10px; align-items: center;">
+            <form id="myForm" style="    display: flex;align-items: center;justify-content: center;flex-direction: row;gap: 10px;">
+                <label for="file-input" class="custom-file-label button-scanqr" id="label-inputfile">Select image</label>
+                <input type="file" id="file-input" class="custom-file-input" style="display:none;" accept="image/*">
+                <p class="name-image" hidden></p>
+            </form>
+            <img id="preview-image" style="display: none; max-width: 200px;max-height: 200px; margin-top: 10px;" alt="Preview Image"/>
+        </div>
+        <div style="border: dashed 3px #000000;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 750px;
+        gap: 10px;">
+        <h4 class="title-create" style="font-size: 1.5rem;">Result after Scanning</h4>
+        <div>
+        <button id="visit-link" hidden class="button-scanqr">Truy cập link</button>
+        <button id="reset-scan" hidden class="button-scanqr">Reset</button>
+        </div>
+        <video id="video" width="400" height="300" autoplay hidden></video>
+        <canvas id="canvas" hidden></canvas>
+        <p id="qr-result"></p>
+        </div>
+        </div>
+</body>
+</html>

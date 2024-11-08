@@ -1,0 +1,145 @@
+.title-create {
+    font-size: 1.8rem;
+    font-family: cursive;
+    font-weight: 600;
+    color:#1e3d7b;
+}
+.input-createqr{
+    border-radius: 5px;
+        border: solid 1.5px gray;
+        height: 45px;
+        width: 600px;
+        padding: 10px;
+        font-size: 18px;
+        color:#1155cc;
+}
+.button-scanqr, .button-createqr{
+    background-color: #f7bf26;
+        height: 45px;
+        border: solid 1px #ffc107;
+        border-radius: 5px;
+        width: 200px;
+        font-size: 20px;
+        font-family: monospace;
+        font-weight: 600;
+}
+.createqrurl-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.qr-resultsc{
+    font-weight: 600;
+    color: black;
+    font-size: 18px;
+    font-family: math;
+    border: dashed 2px #11c55e;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 700px;
+    text-wrap: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-file-label{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.custom-file-label:hover {
+    background-color: #ff7e07;
+}
+
+.custom-file-input {
+    display: none;
+}
+.disabled-label {
+    pointer-events: none;  
+    background-color: #ccc; 
+    color: #666;            
+    cursor: not-allowed;    
+    border-color: #3f3f3f;
+}
+.name-image{
+    font-family: math;
+    color: black;
+    font-size: 17px;
+    background-color: white;
+    margin: 0;
+    padding: 10px;
+    height: 45px;
+    border: solid 1px #b8c0bc;
+    border-radius: 5px;
+    width: 400px;            /* Chiều rộng cố định */
+    white-space: nowrap;     /* Không cho phép xuống dòng */
+    overflow: hidden;        /* Ẩn phần tràn ra khỏi vùng hiển thị */
+    text-overflow: ellipsis;
+}
+.custom-div-select{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.custom-border-selected{
+    border: 2px solid green;
+}
+.custom-invalid-url{
+color: red;
+font-family: cursive;
+font-size: 1rem;
+border: dashed 2px #ff7575a8;
+border-radius: 3px;
+text-align: center;
+background-color: #ffc8c873;
+}
+.name-file{
+width: 250px;
+font-size: 1.1rem;
+font-family: math;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+color: #7e7c7c;
+margin: auto;
+}
+#map {
+    height: 255px;
+    width: auto;
+    border: solid 5px #fbf3f31f;
+}
+.div-mapform{
+display: flex;
+flex-direction: row;
+gap: 5px;
+align-items: center;
+justify-content: space-between;
+}
+.label-mapfrom{
+font-family: cursive;
+font-size: 1.2rem;
+font-weight: 600;
+color: #1e3d7b;
+}
+.input-mapform{
+padding: 5px;
+height: 30px;
+width: 350px;
+white-space: nowrap;
+text-overflow: ellipsis;
+font-size: 15px;
+font-family: math;
+border: solid 1.5px #80808063;
+border-radius: 4px;
+}
+.custom-form-handle{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 110px;
+    justify-content: center;
+}

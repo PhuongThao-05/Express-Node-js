@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator with Text Editor</title>
+    <!-- jQuery (cần thiết cho Summernote) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Summernote CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-lite.min.css" rel="stylesheet">
+    <!-- Summernote JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-lite.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="/static/css/generateform.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+    <script src="/static/js/textqr.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="custom-form-handle">
+        <div>
+            <h1 class="title-create">Generate QR Code with Text</h1>
+            <form id="qrCodeForm" class="createqrurl-form" enctype="multipart/form-data">
+                <div style="display: flex;flex-direction: column;gap: 2px;">
+                <textarea id="summernote" name="data" required></textarea>
+                <p id="result-valid" style="display: none;"></p>
+                <p id="word-count" style="text-align: right;margin-top: 2px;margin-bottom: 0px;">Words: 0/150</p>
+                </div>
+                {% include 'Customize.html' %}
+                <button type="submit" class="button-createqr">Make QR code</button>
+            </form>
+        </div>
+        <div style="border: dashed 3px #000000;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 600px;
+        gap: 10px;">
+            <h1 class="title-create">Your QR Code</h1>
+            <div id="qrResult" class="qr-result" style="display: none; padding-bottom: 10px;"></div>
+            <div style="display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;">
+                <button id="downloadBtn" class="button-createqr" style="display: none;">Download QR Code</button>
+                <button id="resetBtn" class="button-createqr" style="display: none;">Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

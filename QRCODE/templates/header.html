@@ -1,0 +1,62 @@
+		<!-- Start Header/Navigation -->
+		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+			<div class="container">
+				<a class="navbar-brand" href="/" style="font-family: cursive;display: flex;gap: 5px;align-items: center;">
+                    <img src="/static/images/logo.png" style="max-width: 60px;">QR<span style="font-size: 1.6rem;">generator</span></a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarsFurni">
+					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+						<li class="nav-item">
+							<a class="nav-link active" href="/">Home</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="/scanqr">QR Scanner</a></li>
+						<li class="nav-item"><a class="nav-link" href="">About us</a></li>
+						<li class="nav-item"><a class="nav-link" href="">Support</a></li>
+						<li class="nav-item"><a class="nav-link" href="">Contact</a></li>
+					</ul>
+
+					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                        <li><a class="nav-link" href="/createqr" style="background-color: #ffe6e6;
+							color: #000000;
+							font-weight: 600;
+							border: solid 4px #808080;
+							border-radius: 8px;
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+							gap: 10px;">
+						Create QR Code <i class="fa-solid fa-circle-right" style="font-size: 18px;"></i></a></li>
+					</ul>
+				</div>
+			</div>
+				
+		</nav>
+		
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const filterItems = document.querySelectorAll('.nav-item');
+		const currentPath = window.location.pathname; // Lấy đường dẫn hiện tại
+	
+		filterItems.forEach(item => {
+			const link = item.querySelector('.nav-link');
+			
+			// Kiểm tra nếu đường dẫn của link khớp với đường dẫn hiện tại
+			if (link.getAttribute('href') === currentPath) {
+				item.classList.add('active'); // Thêm class active cho item hiện tại
+			}
+	
+			item.addEventListener('click', function () {
+				// Loại bỏ lớp active khỏi tất cả các nút
+				filterItems.forEach(i => i.classList.remove('active'));
+	
+				// Thêm lớp active cho nút hiện tại
+				item.classList.add('active');
+			});
+		});
+	});
+	</script>

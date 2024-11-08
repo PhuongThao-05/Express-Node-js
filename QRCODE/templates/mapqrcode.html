@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator from Map</title>
+    <!-- Include Leaflet.js for OpenStreetMap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link href="/static/css/generateform.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+    <script src="/static/js/mapqr.js"></script>
+</head>
+<body>
+    <div class="custom-form-handle">
+        <div>
+            <h1 class="title-create">Generate QR Code with Map</h1>
+            <form id="mapForm" class="createqrurl-form" enctype="multipart/form-data">
+                <div class="div-mapform">
+                <!-- Textbox for Google Maps Link -->
+                <label for="maps-link" class="label-mapfrom">Google Maps Link:</label>
+                <input type="text" id="maps-link" class="input-mapform" placeholder="Enter Google Maps Link">
+                </div>
+                <div class="div-mapform">
+                <!-- Latitude and Longitude Input -->
+                <label for="latitude" class="label-mapfrom">Latitude:</label>
+                <input type="text" id="latitude" class="input-mapform" placeholder="Enter Latitude(vĩ độ) (optional)">
+                </div>
+                <div class="div-mapform">
+                <label for="longitude" class="label-mapfrom">Longitude:</label>
+                <input type="text" id="longitude" class="input-mapform" placeholder="Enter Longitude(kinh độ) (optional)">  
+                </div>              
+                <!-- Map for Selecting Location -->
+                <div id="map"></div>
+                {% include 'Customize.html' %}
+                <button type="submit" class="button-createqr">Make QR code</button>
+            </form>
+        </div>
+        <div style="border: dashed 3px #000000;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 600px;
+        gap: 10px;">
+            <h1 class="title-create">Your QR Code</h1>
+            <div id="qrResult" class="qr-result" style="display: none; padding-bottom: 10px;"></div>
+            <div style="display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;">
+                <button id="downloadBtn" class="button-createqr" style="display: none;">Download QR Code</button>
+                <button id="resetBtn" class="button-createqr" style="display: none;">Reset</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

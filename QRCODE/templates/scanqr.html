@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="/static/images/logo.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+  
+		<!-- Bootstrap /static/css -->
+		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="/static/css/tiny-slider.css" rel="stylesheet">
+		<link href="/static/css/style.css" rel="stylesheet">
+		<title>Scan QR Code</title>
+        <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+		<script src="/static/js/scanqrcode.js"></script>
+	</head>
+
+	<body>
+		{% include 'header.html' %}
+        <div>
+            <div>
+                <h2 style="margin: 20px auto; text-align: center; font-family: cursive; font-size: 2.5rem; font-weight: bold; color: #000000;">
+                    <i class="fa-solid fa-qrcode"></i>
+                    Scanning QR Code
+                </h2>
+            </div>
+            <div class="container">
+                <section class="food_section layout_padding">
+                    <div class="container">
+                        <ul class="filters_menu" style="margin: 30px auto; list-style: none; display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center; font-family: cursive; font-size: 1rem; color: black;">
+                            <li class="selectitem-active filter-item" data-url="/camera"><i class="fa-solid fa-camera"></i> Scanning with your camera</li>
+                            <li class="filter-item scimage" data-url="/scimage"><i class="fa-solid fa-file-image"></i> Choose your image</li>
+                        </ul>
+                        <div class="filters-content">
+                            <div class="row grid">
+                                <!-- Nội dung sẽ được cập nhật ở đây -->
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+            </div>
+        </div> 
+		{% include 'footer.html' %}
+		<script src="/static/js/bootstrap.bundle.min.js"></script>
+		<script src="/static/js/tiny-slider.js"></script>
+		<script src="/static/js/custom.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<style>
+			.filter-item {
+			  border: solid 2px #768bb6;
+			  border-radius: 50px;
+			  cursor: pointer;
+			  padding: 5px 15px;
+			  text-align: center;
+			  width: 260px;
+			}
+		  
+			.selectitem-active {
+			  background-color: #1e3d7b;
+			  color: white;
+			  font-family: cursive;
+			}
+		  
+			.filters-content {
+			  margin-top: 20px;
+			}
+		  </style>
+	</body>
+
+</html>

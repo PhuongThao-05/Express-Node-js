@@ -1,0 +1,55 @@
+               <!-- Tùy chọn chọn màu mã QR -->
+               <div>
+                <div class="custom-div-select">
+                    <div class="custom-div-select">
+                        <label for="fill_color"
+                            style="font-size: 1.2rem;font-family: cursive;font-weight: 600;color: #1e3d7b;">Select
+                            QR color:</label>
+                        <input type="color" id="fill_color" name="fill_color" value="#000000">
+                    </div>
+                    <div class="custom-div-select"></div>
+                    <label for="back_color"
+                        style="font-size: 1.2rem;font-family: cursive;font-weight: 600;color: #1e3d7b;">Select
+                        background color:</label>
+                    <input type="color" id="back_color" name="back_color" value="#FFFFFF">
+                </div>
+            </div>
+            <!-- Tùy chọn chọn kích thước -->
+             <div class="custom-div-select">
+            <label for="size" style="font-size: 1.2rem;font-family: cursive;font-weight:600;color: #1e3d7b;">Select size:</label>
+            <input type="number" id="size" name="size" required value="300" min="100" max="1000" style="width: 120px;
+            text-align: center;
+            font-family: cursive;
+            font-size: 1.1rem;">
+            </div>
+            <h2 style="font-size: 1.2rem;font-family: cursive;font-weight: 600;color: #1e3d7b;">
+                Choose image to insert your QR code
+            </h2>
+            <div id="imageSelection" style="display: flex; gap: 10px;">
+                <img src="/static/images/close-svgrepo-com.png" alt="Image 1" class="qr-image-option custom-border-selected"
+                    data-image=""
+                    style="cursor: pointer; width: 50px; height: 50px;">
+                <img src="/static/images/facebook-3-logo-svgrepo-com.png" alt="Image 2" class="qr-image-option"
+                    data-image="/static/images/facebook-3-logo-svgrepo-com.png"
+                    style="cursor: pointer; width: 50px; height: 50px;">
+                <img src="/static/images/instagram-2-1-logo-svgrepo-com.png" alt="Image 3" class="qr-image-option"
+                    data-image="/static/images/instagram-2-1-logo-svgrepo-com.png"
+                    style="cursor: pointer; width: 50px; height: 50px;">
+                <img src="/static/images/map-pin-svgrepo-com.png" alt="Image 4" class="qr-image-option"
+                    data-image="/static/images/map-pin-svgrepo-com.png"
+                    style="cursor: pointer; width: 50px; height: 50px;">
+                <img src="/static/images/tiktok-logo-logo-svgrepo-com.png" alt="Image 5" class="qr-image-option"
+                    data-image="/static/images/tiktok-logo-logo-svgrepo-com.png"
+                    style="cursor: pointer; width: 50px; height: 50px;">
+                <img src="/static/images/whatsapp-icon-logo-svgrepo-com.png" alt="Image 6" class="qr-image-option"
+                    data-image="/static/images/whatsapp-icon-logo-svgrepo-com.png"
+                    style="cursor: pointer; width: 50px; height: 50px;">
+            <input type="file" id="logo" name="logo" style="display: none;" accept="image/*">
+            <button id="uploadBtn" style=" width: 50px; height: 50px; border: solid 2.5px #ffc107;border-radius: 5px;font-size: 1.5rem;" >
+<i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+        </div>
+            <p id="TitleimgPreview" style="display: none;font-size: 1.2rem;font-family: cursive;font-weight:600;color: #1e3d7b;margin-bottom: 0;">
+               Selected image:</p>
+            <img id="selectedImagePreview"
+                style="display: none; width: 100px; height: 100px; border: 1px solid #ccc;"
+                alt="Selected Image Preview">

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator and Scanner</title>
+    <link href="/static/css/generateform.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+    <script src="/static/js/scanning.js"></script>
+</head>
+<body>
+<div style="display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 20px; margin: 15px auto;">
+    <div>
+    <button id="start-scan" class="button-scanqr">Start scanning</button>
+    <button id="reset-scan" hidden class="button-scanqr">Reset</button>
+    </div>
+    <video id="video" width="400" height="300" autoplay hidden style="border-radius: 50px;"></video>
+    <canvas id="canvas" hidden></canvas>
+    <p id="qr-result"></p>
+    <button id="visit-link" hidden class="button-scanqr">Truy cập link</button>
+</div>
+</body>
+</html>
